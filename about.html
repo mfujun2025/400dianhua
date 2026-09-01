@@ -47,7 +47,7 @@ img{max-width:100%;display:block;}
 
 /* ===== Hero ===== */
 .hero{position:relative;min-height:520px;display:flex;align-items:center;overflow:hidden;background:var(--navy-900);}
-.hero-bg{position:absolute;inset:0;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(200,150,62,.18),transparent 55%),linear-gradient(135deg,#0B1F3F 0%,#1A3F7A 60%);}
 .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.42;}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,var(--navy-900) 0%,rgba(11,31,63,.86) 45%,rgba(11,31,63,.34) 100%);}
 .hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:80px 24px;width:100%;}
@@ -148,7 +148,10 @@ img{max-width:100%;display:block;}
 .article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .article-card{background:var(--paper);border-radius:6px;overflow:hidden;border:1px solid var(--line);transition:all .3s;cursor:pointer;display:flex;flex-direction:column;}
 .article-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(11,31,63,.12);}
-.article-thumb{height:180px;overflow:hidden;background:var(--navy-800);position:relative;}
+.article-thumb{height:180px;overflow:hidden;background:linear-gradient(135deg,#0B1F3F 0%,#1A3F7A 100%);position:relative;}
+.article-thumb::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(200,150,62,.30),transparent 62%);}
+.article-thumb .thumb-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:26px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:3px;z-index:1;padding:0 16px;text-align:center;line-height:1.4;}
+.article-card:hover .article-thumb::before{opacity:.85;}
 .article-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
 .article-card:hover .article-thumb img{transform:scale(1.05);}
 .article-cat{position:absolute;top:12px;left:12px;background:var(--gold-500);color:var(--navy-900);padding:4px 12px;font-size:12px;font-weight:600;border-radius:3px;}
@@ -342,7 +345,7 @@ img{max-width:100%;display:block;}
       <button class="float-panel-close" onclick="toggleFloatPanel()" aria-label="关闭">×</button>
     </div>
     <div class="float-panel-body">
-      <div class="wechat-qr" id="wechatQr"><img src="https://aka.doubaocdn.com/s/mjVXLSAKYE" alt="微信二维码"></div>
+      <div class="wechat-qr" id="wechatQr">微信二维码<br>（请替换为您的二维码图片）</div>
       <div class="wechat-id-row">
         <div>
           <div class="label">微信号</div>
