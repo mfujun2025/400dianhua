@@ -81,3 +81,35 @@
 本次已全部替换为"品牌色渐变+栏目文字"样式，永不失效、离线可用、
 利于百度收录，无需再上传任何图片文件。微信客服二维码处请自行
 替换为您自己的二维码图片。
+
+
+【SEO收录优化说明（解决Bing显示index.html和标题堆砌问题）】
+
+一、已做的代码优化
+1. 全站16个页面已加 canonical 规范URL标签，首页指向 https://400电话.中国/（不带index.html）
+2. 首页标题已优化为"400电话申请办理_企业400靓号资费与办理指南 - 400电话.中国"（去掉重复堆砌）
+3. 首页描述已优化，更精炼有吸引力
+4. 已生成 sitemap.xml（16个页面）和 robots.txt
+
+二、服务器配置（必须做，否则URL仍会显示index.html）
+方法A：设置默认首页（推荐，最简单）
+  虚拟主机/宝塔面板：在网站设置里把"默认文档"设为 index.html（排在第一位）
+  Nginx：在 server 块里加 index index.html;
+  Apache：在 .htaccess 里加 DirectoryIndex index.html
+
+方法B：301重定向（更彻底，配合方法A使用）
+  Nginx配置：
+    if ($request_uri = /index.html) { return 301 /; }
+  Apache .htaccess：
+    RedirectMatch 301 ^/index.html$ /
+
+三、Bing站长工具操作（让收录尽快更新）
+1. 打开 https://www.bing.com/webmasters 登录
+2. 提交站点：https://400电话.中国 （或punycode: https://xn--400-vt1hu08g.xn--fiqs8s）
+3. 提交sitemap：https://xn--400-vt1hu08g.xn--fiqs8s/sitemap.xml
+4. URL提交：在"提交URL"里输入 https://400电话.中国/ ，请求Bing重新抓取
+5. 旧的带index.html的收录会在1-4周内自动更新为规范URL，无需手动删除
+
+四、百度收录同样适用以上配置
+  百度搜索资源平台：https://ziyuan.baidu.com
+  提交sitemap和主动推送URL，加快收录更新
