@@ -1,1 +1,39 @@
+name: 同步400号码库
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # 每30分钟自动同步一次
+  workflow_dispatch:           # 支持手动触发（飞书加完号码可立即点）
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 从飞书同步号码库
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          BASE_TOKEN: Vugfbq5D9aR7I5sBholcPFJjnEf
+          TABLE_ID: tblZ6EyA2BsJBHgW
+          OUTPUT_FILE: numbers.js
+        run: python3 sync_numbers.py
+
+      - name: 检查变化并提交
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet numbers.js; then
+            echo "号码库无变化，无需提交"
+          else
+            git add numbers.js
+            git commit -m "自动同步400号码库 $(date '+%Y-%m-%d %H:%M')"
+            git push
+            echo "号码库已更新并推送，GitHub Pages 将自动重新部署"
+          fi
 
