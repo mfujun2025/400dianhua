@@ -148,6 +148,27 @@ img{max-width:100%;display:block;}
   .float-service{right:16px;bottom:20px;}.float-btn{width:50px;height:50px;}.float-panel{width:260px;}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== 成交单弹窗 ===== */
+.deal-mask{display:none;position:fixed;inset:0;background:rgba(11,31,63,.55);z-index:1200;}
+.deal-modal{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:min(560px,92vw);background:var(--paper);border-radius:12px;z-index:1201;padding:32px 34px;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow:auto;}
+.deal-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:26px;color:var(--ink-3);cursor:pointer;line-height:1;}
+.deal-close:hover{color:var(--navy-900);}
+.deal-title{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy-900);margin-bottom:6px;}
+.deal-sub{font-size:13px;color:var(--ink-3);margin-bottom:18px;}
+.deal-num{font-family:var(--serif);font-size:34px;font-weight:900;color:var(--gold-500);letter-spacing:1px;margin-bottom:14px;}
+.deal-info{display:flex;gap:22px;flex-wrap:wrap;background:var(--cream);border-radius:8px;padding:14px 18px;margin-bottom:14px;font-size:14px;color:var(--ink-3);}
+.deal-info b{color:var(--navy-800);margin-left:4px;}
+.deal-note{font-size:14px;color:var(--ink-2);line-height:1.75;margin-bottom:16px;}
+.deal-tip{background:#eef4ff;border:1px solid #c8d8f0;border-radius:6px;padding:14px 16px;font-size:13px;color:var(--navy-700);line-height:1.75;margin-bottom:20px;}
+.deal-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.deal-btn{flex:1;min-width:150px;padding:13px 20px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;font-family:var(--sans);border:none;transition:all .2s;}
+.deal-btn.main{background:var(--gold-500);color:var(--navy-900);}
+.deal-btn.main:hover{background:var(--gold-400);}
+.deal-btn.ghost{background:#fff;border:1px solid var(--line);color:var(--navy-800);}
+.deal-btn.ghost:hover{border-color:var(--gold-400);}
+.ghost-btn{background:#fff;border:1px solid var(--line);color:var(--navy-800);padding:9px 14px;}
+.ghost-btn:hover{border-color:var(--gold-400);color:var(--navy-800);}
 </style>
 </head>
 <body>
@@ -155,18 +176,18 @@ img{max-width:100%;display:block;}
 <!-- ===== 顶部导航 ===== -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand" onclick="location.href='index.html#/home'">
+    <div class="brand" onclick="location.href='index.html'">
       <div class="brand-mark">400</div>
       <div class="brand-text">400电话<span>.中国</span></div>
     </div>
     <nav class="main-nav" id="mainNav">
-      <a href="index.html#/home">首页</a>
+      <a href="index.html">首页</a>
       <a class="active" href="400选号大厅.html">选号大厅</a>
-      <a href="index.html#/guide">办理指南</a>
-      <a href="index.html#/number">靓号资讯</a>
-      <a href="index.html#/price">资费科普</a>
-      <a href="index.html#/news">行业资讯</a>
-      <a href="index.html#/about">关于本站</a>
+      <a href="guide.html">办理指南</a>
+      <a href="number.html">靓号资讯</a>
+      <a href="price.html">资费科普</a>
+      <a href="news.html">行业资讯</a>
+      <a href="about.html">关于本站</a>
     </nav>
     <button class="nav-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="打开菜单">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -260,9 +281,9 @@ img{max-width:100%;display:block;}
 <div class="cta-band">
   <h2>还没找到心仪的号码？</h2>
   <p>号码资源每日更新，也可以先了解办理流程与资费，再做决定。</p>
-  <a class="btn btn-gold" href="index.html#/guide">查看办理指南</a>
+  <a class="btn btn-gold" href="guide.html">查看办理指南</a>
   <span style="display:inline-block;width:10px"></span>
-  <a class="btn btn-outline" href="index.html#/price">查看资费套餐</a>
+  <a class="btn btn-outline" href="price.html">查看资费套餐</a>
 </div>
 
 <!-- ===== 页脚 ===== -->
@@ -275,22 +296,22 @@ img{max-width:100%;display:block;}
       </div>
       <div class="footer-col">
         <h4>资讯栏目</h4>
-        <a href="index.html#/guide">办理指南</a>
-        <a href="index.html#/number">靓号资讯</a>
-        <a href="index.html#/price">资费科普</a>
-        <a href="index.html#/news">行业资讯</a>
+        <a href="guide.html">办理指南</a>
+        <a href="number.html">靓号资讯</a>
+        <a href="price.html">资费科普</a>
+        <a href="news.html">行业资讯</a>
       </div>
       <div class="footer-col">
         <h4>快速入口</h4>
         <a href="400选号大厅.html">在线选号</a>
-        <a href="index.html#/guide">办理流程</a>
-        <a href="index.html#/about">关于本站</a>
+        <a href="guide.html">办理流程</a>
+        <a href="about.html">关于本站</a>
       </div>
       <div class="footer-col">
         <h4>关于</h4>
-        <a href="index.html#/about">关于本站</a>
-        <a href="index.html#/about">免责声明</a>
-        <a href="index.html#/about">联系方式</a>
+        <a href="about.html">关于本站</a>
+        <a href="about.html">免责声明</a>
+        <a href="about.html">联系方式</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -325,6 +346,26 @@ img{max-width:100%;display:block;}
 
 <!-- ===== Toast ===== -->
 <div class="toast" id="toast"></div>
+<!-- ===== 成交单弹窗 ===== -->
+<div class="deal-mask" id="dealMask" onclick="closeDeal()"></div>
+<div class="deal-modal" id="dealModal">
+  <button class="deal-close" onclick="closeDeal()">×</button>
+  <div class="deal-title">400 成交单确认</div>
+  <div class="deal-sub">所选号码即将提交到飞书「400成交单」表格</div>
+  <div class="deal-num" id="dealNum">4000-888-6688</div>
+  <div class="deal-info">
+    <span>号段<b id="dealSeg">4000</b></span>
+    <span>号码等级<b id="dealLevel">顶级</b></span>
+    <span>预存价格<b id="dealPrice">¥8000 起/年</b></span>
+  </div>
+  <p class="deal-note" id="dealMeaning"></p>
+  <div class="deal-tip">该号码已生成成交单草稿，前往飞书表单填写<strong>客户姓名</strong>与<strong>联系电话</strong>后提交，将自动保存到「400成交单」表格。所选号码已自动复制，在表单对应输入框粘贴即可。</div>
+  <div class="deal-actions">
+    <button class="deal-btn ghost" onclick="copyDealInfo()">复制成交单信息</button>
+    <button class="deal-btn main" onclick="openForm()">去飞书表单提交</button>
+  </div>
+</div>
+
 
 <script src="numbers.js"></script>
 <script>
@@ -390,7 +431,8 @@ function cardHtml(n){
     '<div class="num-line"><span class="n-seg">'+n.seg+'</span>-'+n.num+'</div>'+
     '<p class="hall-note">'+n.meaning+'</p>'+
     '<div class="hall-foot"><span class="hall-price">¥'+n.price+'<span>起 / 年预存</span></span>'+
-    '<button class="hall-btn" onclick="selectNum(\''+n.seg+'\',\''+n.num+'\','+n.price+',\''+n.level+'\',\''+n.meaning+'\')">选这个号码</button></div>'+
+    '<button class="hall-btn ghost-btn" onclick="selectNum(\''+n.seg+'\',\''+n.num+'\','+n.price+',\''+n.level+'\',\''+n.meaning+'\')">关注</button>'+
+    '<button class="hall-btn" onclick="openDeal(\''+n.seg+'\',\''+n.num+'\','+n.price+',\''+n.level+'\',\''+n.meaning+'\')">生成成交单</button></div>'+
   '</div>';
 }
 
@@ -437,7 +479,7 @@ function savePick(seg, num, level, price, meaning){
 function selectNum(seg, num, price, level, meaning){
   var count = savePick(seg, num, level, price, meaning);
   var t = document.getElementById('toast');
-  t.innerHTML = '已关注 <b>'+seg+'-'+num+'</b>，已同步到首页「我关注的靓号」（共 '+count+' 个）。<b><a href="index.html#/home" style="color:var(--gold-400);text-decoration:underline;">回首页查看</a></b>';
+  t.innerHTML = '已关注 <b>'+seg+'-'+num+'</b>，已同步到首页「我关注的靓号」（共 '+count+' 个）。<b><a href="index.html" style="color:var(--gold-400);text-decoration:underline;">回首页查看</a></b>';
   t.classList.add('show');
   clearTimeout(selectNum._t);
   selectNum._t = setTimeout(function(){ t.classList.remove('show'); }, 4200);
@@ -450,12 +492,49 @@ function renderPicksTip(){
   if(arr.length===0){ tip.classList.remove('show'); return; }
   tip.classList.add('show');
   tip.innerHTML = '<span class="pt-left">您已关注 <b>'+arr.length+'</b> 个号码，已同步到首页「我关注的靓号」推荐</span>'+
-    '<span class="pt-actions"><button class="pt-btn" onclick="location.href=\'index.html#/home\'">回首页查看</button><button class="pt-btn ghost" onclick="clearPicks()">清空</button></span>';
+    '<span class="pt-actions"><button class="pt-btn" onclick="location.href=\'index.html\'">回首页查看</button><button class="pt-btn ghost" onclick="clearPicks()">清空</button></span>';
 }
 function clearPicks(){
   try{ localStorage.removeItem('my400picks'); }catch(e){}
   renderPicksTip();
 }
+
+/* ===== 成交单 ===== */
+var DEAL_FORM_URL = 'https://my.feishu.cn/share/base/shrcntZimUQ8HMdFejRArIZZJJh';
+var _deal = null;
+function openDeal(seg, num, price, level, meaning){
+  _deal = {seg:seg, num:num, price:price, level:level, meaning:meaning};
+  document.getElementById('dealNum').textContent = seg+'-'+num;
+  document.getElementById('dealSeg').textContent = seg;
+  document.getElementById('dealLevel').textContent = level;
+  document.getElementById('dealPrice').textContent = '¥'+price+' 起/年';
+  document.getElementById('dealMeaning').textContent = meaning;
+  document.getElementById('dealMask').style.display = 'block';
+  document.getElementById('dealModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  try{ navigator.clipboard.writeText(seg+'-'+num); }catch(e){}
+}
+function closeDeal(){
+  document.getElementById('dealMask').style.display = 'none';
+  document.getElementById('dealModal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function openForm(){
+  window.open(DEAL_FORM_URL, '_blank');
+}
+function copyDealInfo(){
+  if(!_deal){ return; }
+  var t = '【400成交单】\n所选号码：'+_deal.seg+'-'+_deal.num+'\n号段：'+_deal.seg+'\n号码等级：'+_deal.level+'\n预存价格：¥'+_deal.price+' 起/年\n寓意说明：'+_deal.meaning;
+  try{ navigator.clipboard.writeText(t); }catch(e){}
+  var toast = document.getElementById('toast');
+  toast.innerHTML = '成交单信息已复制，前往飞书表单粘贴填写';
+  toast.classList.add('show');
+  clearTimeout(copyDealInfo._t);
+  copyDealInfo._t = setTimeout(function(){ toast.classList.remove('show'); }, 3200);
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ closeDeal(); }
+});
 
 /* ===== 初始化 ===== */
 bindGroup('fbSeg','seg');
