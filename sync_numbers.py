@@ -64,7 +64,9 @@ def generate_js(records):
         if isinstance(price, float) and price.is_integer():
             price = int(price)
         meaning = _get_text(f.get('寓意', ''))
-        num = full[len(seg)+1:] if full.startswith(seg+'-') else full
+        digits = full.replace('-', '')
+        num_raw = digits[3:] if len(digits) > 3 else full
+        num = num_raw[:3] + '-' + num_raw[3:] if len(num_raw) == 7 else num_raw
         nums.append({'seg':seg,'num':num,'level':level,'price':price,'meaning':meaning})
     nums.sort(key=lambda x: (seg_order.get(x['seg'], 9), x['num']))
 
