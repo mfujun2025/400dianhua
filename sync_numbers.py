@@ -81,7 +81,13 @@ def generate_js(records):
     ]
     for i, n in enumerate(nums):
         comma = ',' if i < len(nums) - 1 else ''
-        lines.append(f'  {{seg:"{n["seg"]}", num:"{n["num"]}", level:"{n["level"]}", price:{n["price"]},  meaning:"{n["meaning"]}"}}{comma}')
+        price_val = n['price']
+        if isinstance(price_val, (int, float)):
+            price_js = str(price_val)
+        else:
+            price_js = '"' + str(price_val).replace('"', '\\"') + '"'
+        meaning_js = str(n['meaning']).replace('"', '\\"')
+        lines.append(f'  {{seg:"{n["seg"]}", num:"{n["num"]}", level:"{n["level"]}", price:{price_js}, meaning:"{meaning_js}"}}{comma}')
     lines.append('];')
     return '\n'.join(lines) + '\n'
 
