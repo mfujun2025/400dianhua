@@ -40,5 +40,6 @@ window.PHONE_NUMBERS = [
   {seg:"4008", num:"895-6565", level:"精品", price:"5000/5年", meaning:"ABAB"},
   {seg:"4008", num:"895-7676", level:"精品", price:"5000/5年", meaning:"ABAB"},
   {seg:"4008", num:"895-7755", level:"精品", price:"5000/5年", meaning:"AABB"},
-  {seg:"4008", num:"995-3366", level:"精品", price:"5000/5年", meaning:"AABB"}
+  {seg:"4008", num:"995-3366", level:"精品", price:"5000/5年", meaning:"AABB"},
+  {seg:"", num:"", level:"", price:0, meaning:""}
 ];
