@@ -9,10 +9,13 @@
 window.PHONE_NUMBERS = [
   {seg:"4000", num:"019-9985", level:"优选", price:"3000元/3年", meaning:"教育行业精品靓号（985）"},
   {seg:"4000", num:"058-8178", level:"优选", price:"3000元/3年", meaning:"财富能量号（178）"},
+  {seg:"4000", num:"075-9998", level:"优选", price:"6000/3年", meaning:"尾号88吉祥号，寓意发财发达，6000元/3年套餐，适合各类企业"},
   {seg:"4000", num:"098-9138", level:"优选", price:"3000元/3年", meaning:"138一生發精品靓号"},
   {seg:"4001", num:"106-6777", level:"顶级", price:"12888元/3年", meaning:"餐饮靓号"},
   {seg:"4001", num:"117-8777", level:"顶级", price:"12888元/3年", meaning:"餐饮靓号"},
   {seg:"4001", num:"119-8917", level:"优选", price:"3000元/3年", meaning:"餐饮业精品靓号（917）"},
+  {seg:"4001", num:"131-3088", level:"优选", price:"3600/3年", meaning:"连发发"},
+  {seg:"4001", num:"131-3588", level:"优选", price:"3600/3年", meaning:"我发发"},
   {seg:"4001", num:"131-9088", level:"优选", price:"3600/3年", meaning:"连发发"},
   {seg:"4001", num:"133-8616", level:"优选", price:"3000元/3年", meaning:"财富能量号（1338）"},
   {seg:"4001", num:"158-6088", level:"优选", price:"3600/3年", meaning:"六连发发"},
@@ -64,6 +67,5 @@ window.PHONE_NUMBERS = [
   {seg:"4008", num:"895-7676", level:"精品", price:"5000/5年", meaning:"ABAB"},
   {seg:"4008", num:"895-7755", level:"精品", price:"5000/5年", meaning:"AABB"},
   {seg:"4008", num:"995-3366", level:"精品", price:"5000/5年", meaning:"AABB"},
-  {seg:"4009", num:"968-8579", level:"优选", price:"3000元/3年", meaning:"财富能量号（9688）"},
-  {seg:"", num:"", level:"", price:0, meaning:""}
+  {seg:"4009", num:"968-8579", level:"优选", price:"3000元/3年", meaning:"财富能量号（9688）"}
 ];
