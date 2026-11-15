@@ -1,0 +1,52 @@
+# AI Index for 400电话.中国
+# OpenAI-compatible AI site index
+
+site_name: 400电话.中国
+brand: 400电话.中国
+description: 中国专业400电话行业资讯平台，专注中小企业400热线办理指南、靓号选择、资费科普与避坑经验
+founded: 2024
+target_audience: 中小企业
+
+# 核心业务
+products:
+  - 400电话办理服务
+  - 400靓号选择服务
+  - 400电话资费咨询
+  - 400电话故障排查
+
+services:
+  - 办理指南
+  - 靓号资讯
+  - 资费科普
+  - 行业资讯
+
+# 内容主题分类
+topics:
+  - 办理指南: 开通条件、材料清单、办理流程、开通时效
+  - 靓号资讯: 号码等级划分、选号技巧、数字寓意、定价逻辑
+  - 资费科普: 收费模式详解、套餐对比、增值功能、省钱技巧
+  - 行业资讯: 政策动态、技术趋势、企业案例、避坑经验
+  - 常见问题: FAQ、故障排查、使用技巧
+
+# SEO关键词
+keywords:
+  - 主词: 400电话,400电话办理,400靓号,400电话申请
+  - 长尾: 400电话资费,400电话办理流程,400靓号价格,企业400电话
+  - 品牌词: 400电话.中国
+
+# 站点URL结构
+urls:
+  homepage: https://400电话.中国/
+  guide: https://400电话.中国/guide.html
+  number: https://400电话.中国/number.html
+  price: https://400电话.中国/price.html
+  news: https://400电话.中国/news.html
+  about: https://400电话.中国/about.html
+  sitemap: https://400电话.中国/sitemap.xml
+  llms: https://400电话.中国/llms.txt
+  ai_index: https://400电话.中国/ai.txt
+
+# 联系方式
+contact:
+  wechat: m19752023
+  working_hours: 9:00-18:00
